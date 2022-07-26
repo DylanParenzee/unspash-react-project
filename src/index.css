@@ -1,0 +1,25 @@
+body{
+    margin: 0;
+    box-sizing: border-box;
+    background-color: rgb(245, 201, 209);
+    
+}
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo{
+    padding-left: 1em;
+}
+
+.navigation-items{
+    display: flex;
+}
+
+.navigation-items li{
+    padding: 1em 2em;
+    list-style: none;
+    color: rgb(161, 161, 161);
+}
