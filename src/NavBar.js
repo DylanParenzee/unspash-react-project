@@ -1,6 +1,9 @@
 import React from "react";
 
 const NavBar = () => {
+  const handleSubmit = () => {
+    console.log("hello");
+  };
   return (
     <div className="nav-container">
       <h1 id="logo">Dylan's Image Gallery</h1>
@@ -12,7 +15,9 @@ const NavBar = () => {
           <input id="nav-search-bar" type="text" />
         </li>
         <li>
-          <button id="nav-search-btn">Search</button>
+          <button onClick={handleSubmit} id="nav-search-btn">
+            Search
+          </button>
         </li>
       </ul>
     </div>
