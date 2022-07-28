@@ -8,6 +8,12 @@ const NavBar = () => {
         <li>Home</li>
         <li>About</li>
         <li>Contact</li>
+        <li>
+          <input id="nav-search-bar" type="text" />
+        </li>
+        <li>
+          <button id="nav-search-btn">Search</button>
+        </li>
       </ul>
     </div>
   );
