@@ -3,16 +3,25 @@ import "./index.css";
 import NavBar from "./NavBar";
 import { useState } from "react";
 import ImageContainer from "./ImageContainer";
+const ACCESSKEY = process.env.REACT_APP_ACCESS_KEY;
+
+const mainUrl = "https://api.unsplash.com/photos";
+const searchUrl = "https://api.unsplash.com/search/photos";
+const accessKey = ACCESSKEY;
 
 const App = () => {
+  const [loading, setLoading] = useState(false);
   const [images, setImages] = useState([]);
-  const accessKey = "Gl9gxcrGbgAsfxKYvsEZAd7DVGWj2C9GLrPc89oJdew";
+
   const fetchImages = () => {
-    fetch("https://api.unsplash.com/photos/?client_id=" + accessKey)
+    setLoading(true);
+    let url;
+    url = `${mainUrl}${accessKey}`;
+    fetch(url)
       .then((res) => res.json())
       .then((data) => {
-        setImages(data);
-        console.log(images);
+        setLoading(false);
+        console.log(data);
       });
   };
 
@@ -21,21 +30,8 @@ const App = () => {
   }, []);
 
   return (
-    <div className="App">
-      <NavBar />
-      {/* image display  */}
-      <div className="images-container">
-        {images.map((image) => {
-          return (
-            <ImageContainer
-              className="individual-image"
-              key={image.id}
-              src={image.urls.small}
-              alt={image.alt_description}
-            />
-          );
-        })}
-      </div>
+    <div>
+      <h1>Photos</h1>
     </div>
   );
 };

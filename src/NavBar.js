@@ -12,7 +12,7 @@ const NavBar = () => {
         <li>About</li>
         <li>Contact</li>
         <li>
-          <input id="nav-search-bar" type="text" />
+          <input id="nav-search-bar" type="text" placeholder="Search" />
         </li>
         <li>
           <button onClick={handleSubmit} id="nav-search-btn">
