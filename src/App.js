@@ -3,11 +3,10 @@ import "./index.css";
 import NavBar from "./NavBar";
 import { useState } from "react";
 import ImageContainer from "./ImageContainer";
-const ACCESSKEY = process.env.REACT_APP_ACCESS_KEY;
+const accessKey = process.env.REACT_APP_ACCESS_KEY;
 
 const mainUrl = "https://api.unsplash.com/photos";
 const searchUrl = "https://api.unsplash.com/search/photos";
-const accessKey = ACCESSKEY;
 
 const App = () => {
   const [loading, setLoading] = useState(false);
