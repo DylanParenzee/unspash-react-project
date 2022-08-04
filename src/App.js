@@ -24,8 +24,13 @@ const App = () => {
         return res.json();
       })
       .then((data) => {
-        setLoading(false);
         console.log(data);
+        setImages(data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.log(`${error} - unable to load data`);
+        setLoading(false);
       });
   };
 
@@ -33,10 +38,29 @@ const App = () => {
     fetchImages();
   }, []);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Hello");
+  };
+
   return (
-    <div>
-      <h1>Photos</h1>
-    </div>
+    <main>
+      <section className="title">
+        <h1 className="title-words">Unsplash API</h1>
+      </section>
+      <section className="search">
+        <form action="" className="search-form">
+          <input
+            type="text"
+            placeholder="Search Photos"
+            className="form-input"
+          />
+          <button type="submit" className="submit-btn" onClick={handleSubmit}>
+            Submit
+          </button>
+        </form>
+      </section>
+    </main>
   );
 };
 
