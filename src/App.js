@@ -17,7 +17,12 @@ const App = () => {
     let url;
     url = `${mainUrl}${accessKey}`;
     fetch(url)
-      .then((res) => res.json())
+      .then((res) => {
+        if (res.status !== 200) {
+          throw new Error(res.status);
+        }
+        return res.json();
+      })
       .then((data) => {
         setLoading(false);
         console.log(data);
