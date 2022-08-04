@@ -56,7 +56,7 @@ const App = () => {
             className="form-input"
           />
           <button type="submit" className="submit-btn" onClick={handleSubmit}>
-            Submit
+            Search
           </button>
         </form>
       </section>
