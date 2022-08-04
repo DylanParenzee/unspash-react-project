@@ -49,3 +49,22 @@ margin: -100px 0 0 -150px;
     letter-spacing: 1.5px;
     font-family: 'Poppins', sans-serif;
 }
+
+
+
+.nav-container{
+    position: absolute;
+    right: 10px;
+    display: flex;
+}
+
+.navigation-items{
+    display: flex;
+   
+}
+
+.navigation-items li{
+    padding:20px;
+    list-style: none;
+
+}
