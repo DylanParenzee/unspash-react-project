@@ -1,10 +1,12 @@
 import React from "react";
 
 const ImageContainer = (props) => {
+  console.log(props);
   return (
-    <div className="image-container">
-      <h1>Image</h1>
-      <img src={props.src} alt={props.alt} />
+    <div className="photo-container">
+      <article className="photo">
+        <img src={props.urls.regular} alt={props.alt_description} />
+      </article>
     </div>
   );
 };

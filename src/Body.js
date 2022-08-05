@@ -61,9 +61,9 @@ const Home = () => {
         </form>
       </section>
       <section className="photos">
-        <div className="photos-center">
+        <div className="photos-contain">
           {images.map((image, index) => {
-            return <ImageContainer key={index} {...image} />;
+            return <ImageContainer key={image.id} {...image} />;
           })}
         </div>
       </section>
