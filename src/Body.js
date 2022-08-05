@@ -44,7 +44,7 @@ const Home = () => {
   };
 
   return (
-    <main className="main-body">
+    <>
       <section className="title">
         <h1 className="title-words">Unsplash API</h1>
       </section>
@@ -60,7 +60,14 @@ const Home = () => {
           </button>
         </form>
       </section>
-    </main>
+      <section className="photos">
+        <div className="photos-center">
+          {images.map((image, index) => {
+            return <ImageContainer key={index} {...image} />;
+          })}
+        </div>
+      </section>
+    </>
   );
 };
 

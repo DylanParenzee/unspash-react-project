@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Body from "./Body";
 import "./index.css";
 import Subscribe from "./Subscribe";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import NavBar from "./NavBar";
 import { useState } from "react";
@@ -15,8 +16,7 @@ const App = () => {
   return (
     <>
       <NavBar />
-
-      <Body />
+      <Body />;
     </>
   );
 };
