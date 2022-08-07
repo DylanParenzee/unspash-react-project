@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(245, 201, 209);
+    background-color: rgb(244, 217, 242);
     font-family: 'Poppins', sans-serif;
    
     
@@ -113,3 +113,68 @@ align-items: center;
 
    
 }
+
+/* Subscribe Component Styling */
+
+.subscribe-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 70vw;
+    height:500px;
+    align-content: center;
+    margin: 150px auto;
+    background-color: rgb(70, 93, 117);
+    border-radius: 15px;
+    box-shadow: 10px 10px 8px #888888;
+    color: white;
+        
+}
+
+
+.email-input{
+    width: 30%;
+    height: 2em;
+    border: none;
+    height: 2.5em;
+
+}
+
+.subscribe-form{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 40px auto;
+    
+    
+    
+}
+
+::placeholder{
+    font-family: 'Poppins';
+}
+
+.subscribe-button{
+    border: none;
+    background-color: rgb(251, 183, 55);
+    color: white;
+    width: 100px;
+    letter-spacing: 1.5px;
+    
+}
+
+.subscribe-button:hover{
+    cursor: pointer;
+    box-shadow: 1px 1px 5px #888888;
+    height: 2.6em;
+}
+
+.signup-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
