@@ -3,6 +3,7 @@ import Body from "./Body";
 import "./index.css";
 import Subscribe from "./Subscribe";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Footer from "./Footer";
 
 import NavBar from "./NavBar";
 import { useState } from "react";
@@ -19,6 +20,7 @@ const App = () => {
       <Routes>
         <Route exact path="/" element={<Body />}></Route>
         <Route exact path="/subscribe" element={<Subscribe />}></Route>
+        <Route exact path="/footer-info" element={<Footer />}></Route>
       </Routes>
     </Router>
   );
