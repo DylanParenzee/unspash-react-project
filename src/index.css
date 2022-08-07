@@ -73,11 +73,15 @@ align-items: center;
 .navigation-items li{
     padding:20px;
     list-style: none;
+    text-decoration: none;
+    color: white;
 
 }
 
+
 .logo{
     font-family: 'permanent marker';
+    color:rgb(70, 93, 117);
 }
 .photo-container article{
     border-radius: 10px;
@@ -153,6 +157,7 @@ align-items: center;
 
 ::placeholder{
     font-family: 'Poppins';
+    font-size: medium;
 }
 
 .subscribe-button{
