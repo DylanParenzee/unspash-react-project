@@ -16,6 +16,12 @@ justify-content: center;
 align-items: center;
 
 }
+
+.title-words{
+    font-size: larger;
+    
+    
+}
 .search{
    display: flex;
    justify-content: center;
@@ -53,8 +59,10 @@ align-items: center;
 
 .nav-container{
     
-    justify-content: right;
+    justify-content: space-between;
     display: flex;
+    align-items: center;
+    margin-bottom: 50px;
 }
 
 .navigation-items{
@@ -68,6 +76,13 @@ align-items: center;
 
 }
 
+.logo{
+    font-family: 'permanent marker';
+}
+.photo-container article{
+    border-radius: 10px;
+}
+
 .photos {
     padding: 5rem 0;
 }
@@ -76,7 +91,7 @@ align-items: center;
     width: 90vw;
     margin: 0 auto;
     display: grid;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .photo {

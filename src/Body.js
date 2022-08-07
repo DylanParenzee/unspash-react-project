@@ -10,6 +10,7 @@ const searchUrl = "https://api.unsplash.com/search/photos";
 
 //Main Home Component
 const Home = () => {
+  //state variables
   const [images, setImages] = useState([]);
   const [page, setPage] = useState(1);
 
@@ -33,9 +34,9 @@ const Home = () => {
       //Use the data from the returned JSON to set our images state variable
       .then((data) => {
         //Had to do this because on scroll event it jsut tries to load the same data again
-        setImages((oldImages) => {
+        setImages((Images) => {
           //return the old images that were already on the page, with the new ones after the scroll event
-          return [...oldImages, ...data];
+          return [...Images, ...data];
         });
       })
 
@@ -68,7 +69,7 @@ const Home = () => {
   return (
     <>
       <section className="title">
-        <h1 className="title-words">Unsplash API</h1>
+        <h2 className="title-words">Today's Top Posts</h2>
       </section>
       <section className="search">
         <form action="" className="search-form">
