@@ -7,10 +7,20 @@ const NavBar = () => {
       <h1 className="logo"> - Dylan's API Project -</h1>
       <ul className="navigation-items">
         <li>
-          <Link to="/">Home</Link>
+          <Link
+            style={{ textDecoration: "none", color: "rgb(70, 93, 117)" }}
+            to="/"
+          >
+            Home
+          </Link>
         </li>
         <li>
-          <Link to="./subscribe">Subscribe</Link>
+          <Link
+            style={{ textDecoration: "none", color: "rgb(70, 93, 117)" }}
+            to="./subscribe"
+          >
+            Subscribe
+          </Link>
         </li>
       </ul>
     </div>

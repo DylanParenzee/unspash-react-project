@@ -3,7 +3,9 @@ import React from "react";
 const Footer = () => {
   return (
     <div className="footer-container">
-      <h1 className="logo">- Dylan's API Project - </h1>
+      <h1 className="logo" style={{ color: "white" }}>
+        - Dylan's API Project -{" "}
+      </h1>
       <ul className="footer-ul">
         <li className="list-title">Contact</li>
         <li>42 Wallaby Way</li>
