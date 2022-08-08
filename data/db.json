@@ -1,0 +1,16 @@
+
+
+
+{
+    "clients": [
+        {
+            "id": 1,
+            "email": "johndoe@hotmail.com"
+        },
+        {
+            "id": 2,
+            "email": "janeDoe@hotmail.com"
+        }
+
+    ]
+}
