@@ -1,6 +1,7 @@
 import React from "react";
 
 const ImageContainer = (props) => {
+  console.log(props);
   return (
     <div className="photo-container">
       <article className="photo">

@@ -8,6 +8,8 @@ const Subscribe = () => {
     e.preventDefault();
     const client = { userEmail };
 
+    //run this POST request with whatever the value you is in 'client'
+
     fetch("http://localhost:4000/clients", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -15,6 +17,9 @@ const Subscribe = () => {
     })
       .then(() => {
         alert("Your email has been added, Thanks :)");
+      })
+      .then(() => {
+        setUserEmail("");
       })
       .catch((error) => {
         console.log(`${error} - Failed to fetch data`);
