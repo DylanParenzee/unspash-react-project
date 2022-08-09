@@ -3,6 +3,7 @@ import Footer from "./Footer";
 import { useState } from "react";
 
 const Subscribe = () => {
+  //handle submit for email
   const handleSubmit = (e) => {
     e.preventDefault();
     const client = { userEmail };
@@ -16,7 +17,8 @@ const Subscribe = () => {
         alert("Your email has been added, Thanks :)");
       })
       .catch((error) => {
-        console.log(error + "Failed to add Email");
+        console.log(`${error} - Failed to fetch data`);
+        alert(`${error}`);
       });
   };
 
