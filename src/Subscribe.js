@@ -7,13 +7,12 @@ const Subscribe = () => {
     e.preventDefault();
     const client = { userEmail };
 
-    fetch("http://localhost:8000/clients", {
+    fetch("http://localhost:4000/clients", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(client),
     })
       .then(() => {
-        console.log("User Email Added");
         alert("Your email has been added, Thanks :)");
       })
       .catch((error) => {

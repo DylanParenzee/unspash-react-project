@@ -17,11 +17,15 @@ const App = () => {
   return (
     <Router>
       <NavBar />
-      <Routes>
-        <Route exact path="/" element={<Body />}></Route>
-        <Route exact path="/subscribe" element={<Subscribe />}></Route>
-        <Route exact path="/footer-info" element={<Footer />}></Route>
-      </Routes>
+      <Route exact path="/">
+        <Body />
+      </Route>
+      <Route exact path="/subscribe">
+        <Subscribe />
+      </Route>
+      <Route exact path="/footer-info">
+        <Footer />
+      </Route>
     </Router>
   );
 };
