@@ -33,6 +33,7 @@ const Home = () => {
 
       //Use the data from the returned JSON to set our images state variable
       .then((data) => {
+
         //Had to do this because on scroll event it jsut tries to load the same data again
         setImages((Images) => {
           //return the old images that were already on the page, with the new ones after the scroll event
@@ -60,6 +61,7 @@ const Home = () => {
       }
     });
   }, []);
+  
   // This is the click event for the submit button in the search bar
   const handleSubmit = (e) => {
     e.preventDefault();
