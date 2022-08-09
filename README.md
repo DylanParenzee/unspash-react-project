@@ -7,3 +7,6 @@
 - Create a local database and use at least two CRUD operations to interact with your project
 - Use CSS to style your app
 
+
+
+type this code into console to start JSON server-   npm run server
