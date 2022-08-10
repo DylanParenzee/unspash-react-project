@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Body from "./Body";
 import "./index.css";
 import Subscribe from "./Subscribe";
+import Unsubscribe from "./Unsubscribe";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Footer from "./Footer";
 
@@ -22,6 +23,9 @@ const App = () => {
       </Route>
       <Route exact path="/subscribe">
         <Subscribe />
+      </Route>
+      <Route exact path="/unsubscribe">
+        <Unsubscribe />
       </Route>
       <Route exact path="/footer-info">
         <Footer />

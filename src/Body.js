@@ -52,7 +52,10 @@ const Home = () => {
     fetchImages();
   }, [page]);
 
+
+  // if window inner height and scrollY are >= body scroll height update page varible by one
   useEffect(() => {
+
     const event = window.addEventListener("scroll", () => {
       if (window.innerHeight + window.scrollY >= document.body.scrollHeight) {
         setPage((oldPage) => {

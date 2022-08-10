@@ -22,6 +22,14 @@ const NavBar = () => {
             Subscribe
           </Link>
         </li>
+        <li>
+          <Link
+            style={{ textDecoration: "none", color: "rgb(70, 93, 117)" }}
+            to="./unsubscribe"
+          >
+            Unsubscribe
+          </Link>
+        </li>
       </ul>
     </div>
   );
