@@ -23,8 +23,10 @@ const Subscribe = () => {
         setUserEmail("");
       })
       .catch((error) => {
-        console.log(`${error} - Failed to fetch data`);
-        alert(`${error}`);
+        console.log(
+          `${error} to start up server input command 'npm run server into terminals'`
+        );
+        alert(`${error} - please run server to make requests`);
       });
     setDeleteSuccess(false);
   };

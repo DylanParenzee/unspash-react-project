@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import Footer from "./Footer";
 
 const Unsubscribe = () => {
   const [userDelete, setUserDelete] = useState("");
@@ -31,6 +30,12 @@ const Unsubscribe = () => {
               });
           }
         });
+      })
+      .catch((error) => {
+        console.log(
+          `${error} to start up server input command 'npm run server into terminal'`
+        );
+        alert(`${error} - please run server to make requests`);
       });
   }
 
