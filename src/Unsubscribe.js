@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import Footer from "./Footer";
 
 const Unsubscribe = () => {
   const [userDelete, setUserDelete] = useState("");
@@ -77,6 +78,9 @@ const Unsubscribe = () => {
           <h4>Enter your email address and click unsubscribe</h4>
           <DisplayMessage />
         </div>
+      </div>
+      <div>
+        <Footer />
       </div>
     </div>
   );
