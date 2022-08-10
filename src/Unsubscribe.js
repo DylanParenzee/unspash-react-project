@@ -49,7 +49,7 @@ const Unsubscribe = () => {
     if (deleteSucess === true) {
       return (
         <h2 className="delete-sucess-message">
-          The user has been deleted, Bon Voyage!
+          You have been Unsubscribed, Bon Voyage!
         </h2>
       );
     }

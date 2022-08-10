@@ -71,7 +71,7 @@ const Home = () => {
   return (
     <>
       <section className="title">
-        <h2 className="title-words">Scroll Today's Top Posts</h2>
+        <h2 className="title-words"> - Scroll Today's Top Posts - </h2>
       </section>
       {/* <section className="search">
         <form action="" className="search-form">

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -11,6 +12,14 @@ const Footer = () => {
         <li>42 Wallaby Way</li>
         <li>Sydney, 2834</li>
         <li>NSW, Australia</li>
+        <li>
+          <Link
+            style={{ textDecoration: "none", color: "white" }}
+            to="./unsubscribe"
+          >
+            Unsubscribe
+          </Link>
+        </li>
       </ul>
       <ul className="footer-ul">
         <li className="list-title">Reach Out</li>
