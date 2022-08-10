@@ -33,7 +33,6 @@ const Home = () => {
 
       //Use the data from the returned JSON to set our images state variable
       .then((data) => {
-
         //Had to do this because on scroll event it jsut tries to load the same data again
         setImages((Images) => {
           //return the old images that were already on the page, with the new ones after the scroll event
@@ -52,10 +51,8 @@ const Home = () => {
     fetchImages();
   }, [page]);
 
-
   // if window inner height and scrollY are >= body scroll height update page varible by one
   useEffect(() => {
-
     const event = window.addEventListener("scroll", () => {
       if (window.innerHeight + window.scrollY >= document.body.scrollHeight) {
         setPage((oldPage) => {
@@ -64,7 +61,7 @@ const Home = () => {
       }
     });
   }, []);
-  
+
   // This is the click event for the submit button in the search bar
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -76,7 +73,7 @@ const Home = () => {
       <section className="title">
         <h2 className="title-words">Scroll Today's Top Posts</h2>
       </section>
-      <section className="search">
+      {/* <section className="search">
         <form action="" className="search-form">
           <input
             type="text"
@@ -87,7 +84,7 @@ const Home = () => {
             Search
           </button>
         </form>
-      </section>
+      </section> */}
       <section className="photos">
         <div className="photos-contain">
           {images.map((image) => {

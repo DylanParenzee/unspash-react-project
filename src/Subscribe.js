@@ -3,6 +3,7 @@ import Footer from "./Footer";
 import { useState } from "react";
 
 const Subscribe = () => {
+  const [deleteSucess, setDeleteSuccess] = useState(false);
   //handle submit for email
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -16,7 +17,7 @@ const Subscribe = () => {
       body: JSON.stringify(client),
     })
       .then(() => {
-        alert("Your email has been added, Thanks :)");
+        setDeleteSuccess(true);
       })
       .then(() => {
         setUserEmail("");
@@ -25,7 +26,18 @@ const Subscribe = () => {
         console.log(`${error} - Failed to fetch data`);
         alert(`${error}`);
       });
+    setDeleteSuccess(false);
   };
+
+  function UserAddedMessage() {
+    if (deleteSucess === true) {
+      return (
+        <h2 className="delete-sucess-message">
+          User has been added to our database
+        </h2>
+      );
+    }
+  }
 
   const [userEmail, setUserEmail] = useState("");
 
@@ -50,6 +62,7 @@ const Subscribe = () => {
 
         <div className="signup-info">
           <h4>We'll email you more info, opt out any time. promise.</h4>
+          <UserAddedMessage />
         </div>
       </div>
       <Footer />

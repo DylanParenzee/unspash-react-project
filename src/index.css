@@ -213,3 +213,9 @@ align-items: center;
     font-family: 'permanent marker';
     font-size: larger;
 }
+
+
+
+.delete-sucess-message{
+    color: orange;
+}

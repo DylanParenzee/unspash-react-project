@@ -3,15 +3,51 @@ import { useState } from "react";
 import Footer from "./Footer";
 
 const Unsubscribe = () => {
-  const [userDelete, setUserDelete] = useState([]);
+  const [userDelete, setUserDelete] = useState("");
+  const [deleteSucess, setDeleteSucess] = useState(false);
+
+  let deleteId;
+
+  function deleteUser() {
+    let user = userDelete;
+    fetch("http://localhost:4000/clients")
+      .then((res) => res.json())
+      .then((data) => {
+        data.map((item) => {
+          if (item.userEmail == user) {
+            deleteId = item.id;
+            fetch(`http://localhost:4000/clients/` + deleteId, {
+              method: "DELETE",
+              headers: { "Content-Type": "application/json" },
+            })
+              .then(() => {
+                setDeleteSucess(true);
+              })
+              .then(() => {
+                setUserDelete("");
+              })
+              .catch((error) => {
+                alert(`${error} - failed to delete ${deleteId}`);
+              });
+          }
+        });
+      });
+  }
 
   const handleDelete = (e) => {
-    let users;
     e.preventDefault();
-    fetch(`http://localhost:4000/clients/1`, {
-      method: "DELETE",
-    });
+    deleteUser();
   };
+
+  function DisplayMessage() {
+    if (deleteSucess === true) {
+      return (
+        <h2 className="delete-sucess-message">
+          The user has been deleted, Bon Voyage!
+        </h2>
+      );
+    }
+  }
 
   return (
     <div className="subscribe-page">
@@ -34,6 +70,7 @@ const Unsubscribe = () => {
 
         <div className="signup-info">
           <h4>Enter your email address and click unsubscribe</h4>
+          <DisplayMessage />
         </div>
       </div>
     </div>
